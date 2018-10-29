@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-09-11 19:07:17 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Cars" table="cars" catalog="vehicles" optimistic-lock="version">
+        <id name="carId" type="java.lang.Integer">
+            <column name="carId" />
+            <generator class="identity" />
+        </id>
+        <property name="marka" type="string">
+            <column name="marka" length="30" not-null="true" />
+        </property>
+        <property name="model" type="string">
+            <column name="model" length="30" not-null="true" />
+        </property>
+        <property name="rok" type="string">
+            <column name="rok" length="10" not-null="true" />
+        </property>
+        <property name="nadwozie" type="string">
+            <column name="nadwozie" length="20" not-null="true" />
+        </property>
+        <property name="paliwo" type="string">
+            <column name="paliwo" length="20" not-null="true" />
+        </property>
+        <property name="przebieg" type="int">
+            <column name="przebieg" not-null="true" />
+        </property>
+        <property name="kolor" type="string">
+            <column name="kolor" length="30" not-null="true" />
+        </property>
+        <property name="skrzynia" type="string">
+            <column name="skrzynia" length="20" not-null="true" />
+        </property>
+        <property name="stan" type="string">
+            <column name="stan" length="20" not-null="true" />
+        </property>
+        <property name="opis" type="string">
+            <column name="opis" length="300" />
+        </property>
+    </class>
+</hibernate-mapping>
